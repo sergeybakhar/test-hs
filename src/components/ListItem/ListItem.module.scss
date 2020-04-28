@@ -1,0 +1,56 @@
+.listItem {
+  position: relative;
+  &__text {
+    background-color: #fff;
+    padding-left: 5px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin: 0 0 10px;
+    position: relative;
+    z-index: 10;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: 12px;
+    border-left: 1px dotted #000;
+    height: 80%;
+  }
+  &_first::before {
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: -9px;
+    border-left: 1px dotted #000;
+    height: 100%;
+    width: 1px;
+    z-index: 1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    left: -14px;
+    bottom: -13px;
+    border-top: 1px dotted #000;
+    height: 100%;
+    width: 101px;
+    z-index: 1;
+  }
+  &:last-child::before {
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: 12px;
+    border-left: 1px dotted #000;
+    height: 80%;
+  }
+  &_first::after {
+    position: absolute;
+    content: "";
+    border: 0;
+  }
+  & .listItem_last::before {
+    border: 0;
+  }
+}

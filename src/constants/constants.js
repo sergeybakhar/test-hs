@@ -20,6 +20,12 @@ export const mockData = {
             {
               name: "String1.2.1",
             },
+            {
+              name: "String1.2.2",
+            },
+            {
+              name: "String1.2.3",
+            },
           ],
         },
       ],
@@ -35,7 +41,12 @@ export const mockData = {
     },
     {
       name: "String3",
-      children: [],
+      children: [
+        {
+          name: "String3.1",
+          children: [],
+        }
+      ],
     },
   ],
 };

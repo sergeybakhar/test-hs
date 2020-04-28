@@ -1,0 +1,18 @@
+.listSection {
+  width: 30%;
+  margin: 0 auto;
+  padding: 15px 10px 10px;
+  background-color: #eaeaea;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 30px;
+  &:first-child {
+    margin: 0;
+    padding: 0;
+  }
+  &__li {
+    color: blue;
+  }
+}
