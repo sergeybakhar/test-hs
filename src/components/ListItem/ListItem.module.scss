@@ -1,6 +1,5 @@
 .listItem {
   position: relative;
-  cursor: pointer;
   &__text {
     background-color: #fff;
     padding-left: 5px;
@@ -9,6 +8,13 @@
     margin: 0 0 10px;
     position: relative;
     z-index: 10;
+    cursor: pointer;
+    &_cursor {
+      cursor: pointer;
+    }
+    &_last {
+      cursor: default;
+    }
   }
   &::before {
     position: absolute;
@@ -54,13 +60,7 @@
   & .listItem_last::before {
     border: 0;
   }
-  &_last {
-    cursor: default;
-  }
   & .listItem_visible::before {
     border: 0;
-  }
-  &_visible {
-    cursor: pointer;
   }
 }
