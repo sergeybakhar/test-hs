@@ -5,16 +5,20 @@ import styles from './List.module.scss';
 
 const List = () => {
   const { data } = mockData;
-  const renderList = (data) => {
+  const renderList = (data, status = true) => {
+
     return (
-      <ul className={styles.list}>
+      <ul
+        className={styles.list}
+        style={{ display: status ? 'block' : 'none' }}
+      >
         {data.map((item) => {
           if (item.children !== undefined && item.children.length > 0) {
             return (
               <ListItem
                 key={item.name}
                 name={item.name}
-                renderList={() => renderList(item.children)}
+                renderList={(status) => renderList(item.children, status)}
                 firstItems={data.length === mockData.data.length}
                 lastItems={
                   item.children === undefined || item.children.length === 0
